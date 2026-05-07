@@ -1,0 +1,185 @@
+/* Contact Section */
+.contact {
+  padding: 6rem 2rem;
+}
+
+/* Section Title */
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 2.5rem);
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+/* Intro Paragraph */
+.contact-intro {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+/* Contact Cards */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+/* Contact Card */
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 2rem;
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(24px);
+  min-height: 44px;
+}
+
+.contact.section-visible .contact-card {
+  animation: fadeSlideUp 0.6s ease forwards;
+}
+
+.contact-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(79, 255, 176, 0.15);
+}
+
+/* Contact Icon */
+.contact-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contact Label */
+.contact-label {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.01em;
+}
+
+/* Contact Text */
+.contact-text {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Location */
+.contact-location {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  text-align: center;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive - Tablet */
+@media (max-width: 768px) {
+  .contact {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .contact-intro {
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .contact-cards {
+    gap: 1.5rem;
+  }
+
+  .contact-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-icon {
+    font-size: 2.5rem;
+  }
+
+  .contact-label {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 480px) {
+  .contact {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 7vw, 1.8rem);
+    margin-bottom: 1rem;
+  }
+
+  .contact-intro {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contact-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-icon {
+    font-size: 2.2rem;
+  }
+
+  .contact-label {
+    font-size: 0.95rem;
+  }
+
+  .contact-text {
+    font-size: 0.9rem;
+  }
+
+  .contact-location {
+    font-size: 0.9rem;
+  }
+}

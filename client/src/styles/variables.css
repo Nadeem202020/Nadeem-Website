@@ -1,0 +1,16 @@
+:root {
+  --color-bg: #0a0a0f;
+  --color-surface: #12121a;
+  --color-border: #1e1e2e;
+  --color-accent: #4fffb0;
+  --color-accent-dim: #2a9966;
+  --color-text: #e8e8f0;
+  --color-muted: #7070a0;
+  --color-highlight: #1a1a2e;
+
+  --font-display: "Syne", sans-serif;
+  --font-body: "DM Mono", monospace;
+  --font-ui: "Inter", sans-serif;
+
+  --transition-smooth: all 0.3s ease;
+}
