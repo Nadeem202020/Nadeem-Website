@@ -6,7 +6,7 @@ export function usePortfolioData() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("/portfolio-data.json")
+    fetch(`${import.meta.env.BASE_URL}portfolio-data.json`)
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch portfolio data");
