@@ -17,7 +17,7 @@ export default function Projects({ projects }) {
   const [activeFilter, setActiveFilter] = useState("All");
   const [filteredProjects, setFilteredProjects] = useState(projects);
   const sectionRef = useRef(null);
-  const isVisible = useScrollAnimation(sectionRef, { threshold: 0.2 });
+  const isVisible = useScrollAnimation(sectionRef, { threshold: 0.05 });
 
   useEffect(() => {
     if (activeFilter === "All") {
