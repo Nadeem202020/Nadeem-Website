@@ -18,7 +18,6 @@ export default function ExperienceCard({ item, isFirst }) {
             <p className="role">{item.role}</p>
           </div>
           <div className="header-badges">
-            {isFirst && <span className="current-badge">Current</span>}
             <span className="job-type">{item.type}</span>
           </div>
         </div>
