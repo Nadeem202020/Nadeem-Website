@@ -26,6 +26,10 @@ jobs:
         working-directory: ./client
         run: npm install --no-save @rolldown/binding-linux-x64-gnu@1.0.0-rc.18
 
+      - name: Install Lightning CSS native binding
+        working-directory: ./client
+        run: npm install --no-save lightningcss-linux-x64-gnu@1.32.0
+
       - name: Build client
         working-directory: ./client
         run: npm run build
