@@ -189,7 +189,18 @@ File location: `client/public/portfolio-data.json`
         "Built a customer communication service on Meta Cloud API handling inbound/outbound messaging and HMAC-verified webhooks.",
         "Unified WhatsApp, SMS, and email into a single modular TypeScript backend using inheritance and polymorphism."
       ],
-      "tech": ["Remix", "React", "Node.js", "Shopify", "GraphQL", "Bun", "Hono", "MongoDB", "TypeScript", "Meta API"]
+      "tech": [
+        "Remix",
+        "React",
+        "Node.js",
+        "Shopify",
+        "GraphQL",
+        "Bun",
+        "Hono",
+        "MongoDB",
+        "TypeScript",
+        "Meta API"
+      ]
     },
     {
       "id": "exp-2",
@@ -314,7 +325,15 @@ File location: `client/public/portfolio-data.json`
         "Integrated a GenAI Text-to-SQL agent using LangChain.",
         "Built interactive dashboards with Apache Superset."
       ],
-      "tech": ["Kafka", "Spark", "Airflow", "Docker", "LangChain", "PostgreSQL", "Superset"]
+      "tech": [
+        "Kafka",
+        "Spark",
+        "Airflow",
+        "Docker",
+        "LangChain",
+        "PostgreSQL",
+        "Superset"
+      ]
     },
     {
       "id": "proj-5",
@@ -339,7 +358,14 @@ File location: `client/public/portfolio-data.json`
         "Integrated Stripe for payments and Amadeus for live booking data.",
         "Built in an Agile team using Git and GitHub."
       ],
-      "tech": ["MongoDB", "Express.js", "React", "Node.js", "Stripe API", "Amadeus API"]
+      "tech": [
+        "MongoDB",
+        "Express.js",
+        "React",
+        "Node.js",
+        "Stripe API",
+        "Amadeus API"
+      ]
     },
     {
       "id": "proj-7",
@@ -371,23 +397,69 @@ File location: `client/public/portfolio-data.json`
     "categories": [
       {
         "name": "Backend & APIs",
-        "skills": ["Java", "Spring Boot", "Node.js", "Express.js", "Microservices", "REST APIs", "GraphQL", "OAuth 2.0", "Event-Driven Architecture", "WSO2"]
+        "skills": [
+          "Java",
+          "Spring Boot",
+          "Node.js",
+          "Express.js",
+          "Microservices",
+          "REST APIs",
+          "GraphQL",
+          "OAuth 2.0",
+          "Event-Driven Architecture",
+          "WSO2"
+        ]
       },
       {
         "name": "AI & Machine Learning",
-        "skills": ["PyTorch", "Scikit-learn", "Computer Vision", "NLP", "Vision Transformers", "QLoRA", "Hyperparameter Tuning (Optuna)", "TensorFlow"]
+        "skills": [
+          "PyTorch",
+          "Scikit-learn",
+          "Computer Vision",
+          "NLP",
+          "Vision Transformers",
+          "QLoRA",
+          "Hyperparameter Tuning (Optuna)",
+          "TensorFlow"
+        ]
       },
       {
         "name": "Data Engineering",
-        "skills": ["Apache Kafka", "Apache Spark (PySpark)", "Apache Airflow", "ETL Pipelines", "Stream Processing", "Apache Superset"]
+        "skills": [
+          "Apache Kafka",
+          "Apache Spark (PySpark)",
+          "Apache Airflow",
+          "ETL Pipelines",
+          "Stream Processing",
+          "Apache Superset"
+        ]
       },
       {
         "name": "Databases & Graph",
-        "skills": ["PostgreSQL", "MySQL", "MongoDB", "MSSQL", "Redis", "Neo4j", "SQL Optimization", "Knowledge Graphs"]
+        "skills": [
+          "PostgreSQL",
+          "MySQL",
+          "MongoDB",
+          "MSSQL",
+          "Redis",
+          "Neo4j",
+          "SQL Optimization",
+          "Knowledge Graphs"
+        ]
       },
       {
         "name": "Cloud & DevOps",
-        "skills": ["Docker", "Git", "GitHub", "Linux", "GCP", "AWS (EC2, S3, RDS)", "CI/CD Pipelines", "IBM DataPower", "Kubernetes"]
+        "skills": [
+          "Docker",
+          "Git",
+          "GitHub",
+          "Linux",
+          "GCP",
+          "AWS (EC2, S3, RDS)",
+          "CI/CD Pipelines",
+          "IBM DataPower",
+          "Kubernetes"
+        ]
       },
       {
         "name": "Frontend",
@@ -395,11 +467,28 @@ File location: `client/public/portfolio-data.json`
       },
       {
         "name": "Languages",
-        "skills": ["Python", "Java", "TypeScript", "JavaScript", "C", "C++", "SQL"]
+        "skills": [
+          "Python",
+          "Java",
+          "TypeScript",
+          "JavaScript",
+          "C",
+          "C++",
+          "SQL"
+        ]
       },
       {
         "name": "Concepts",
-        "skills": ["Distributed Systems", "System Design", "Design Patterns", "RAG Systems", "OOP", "Data Structures", "Algorithms", "Agile/Scrum"]
+        "skills": [
+          "Distributed Systems",
+          "System Design",
+          "Design Patterns",
+          "RAG Systems",
+          "OOP",
+          "Data Structures",
+          "Algorithms",
+          "Agile/Scrum"
+        ]
       }
     ]
   },
@@ -480,22 +569,25 @@ File location: `client/public/portfolio-data.json`
 
 **Routes:**
 
-| Method | Endpoint           | Response                                 |
-| ------ | ------------------ | ---------------------------------------- |
+| Method | Endpoint         | Response                               |
+| ------ | ---------------- | -------------------------------------- |
 | GET    | `/api/portfolio` | Full contents of `portfolio-data.json` |
 | GET    | `/health`        | `{ status: "ok" }`                     |
 
 **`server/routes/portfolio.js`:**
 
 ```js
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const path = require('path');
-const fs = require('fs');
+const path = require("path");
+const fs = require("fs");
 
-router.get('/', (req, res) => {
-  const filePath = path.join(__dirname, '../../client/public/portfolio-data.json');
-  const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+router.get("/", (req, res) => {
+  const filePath = path.join(
+    __dirname,
+    "../../client/public/portfolio-data.json",
+  );
+  const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
   res.json(data);
 });
 
@@ -592,16 +684,19 @@ App
 **`usePortfolioData.js`** — Custom hook:
 
 ```js
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export function usePortfolioData() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/portfolio-data.json')
-      .then(res => res.json())
-      .then(json => { setData(json); setLoading(false); });
+    fetch("/portfolio-data.json")
+      .then((res) => res.json())
+      .then((json) => {
+        setData(json);
+        setLoading(false);
+      });
   }, []);
 
   return { data, loading };
@@ -618,17 +713,17 @@ export function usePortfolioData() {
 
 ```css
 :root {
-  --color-bg:         #0a0a0f;       /* Near-black with a blue tint */
-  --color-surface:    #12121a;       /* Card backgrounds */
-  --color-border:     #1e1e2e;       /* Subtle borders */
-  --color-accent:     #4fffb0;       /* Electric mint green — primary accent */
-  --color-accent-dim: #2a9966;       /* Dimmed accent for secondary use */
-  --color-text:       #e8e8f0;       /* Primary text */
-  --color-muted:      #7070a0;       /* Secondary text */
-  --color-highlight:  #1a1a2e;       /* Highlighted row/section bg */
-  --font-display:     'Syne', sans-serif;      /* Bold headings */
-  --font-body:        'DM Mono', monospace;    /* Body text — gives a dev aesthetic */
-  --font-ui:          'Inter', sans-serif;     /* UI elements only */
+  --color-bg: #0a0a0f; /* Near-black with a blue tint */
+  --color-surface: #12121a; /* Card backgrounds */
+  --color-border: #1e1e2e; /* Subtle borders */
+  --color-accent: #4fffb0; /* Electric mint green — primary accent */
+  --color-accent-dim: #2a9966; /* Dimmed accent for secondary use */
+  --color-text: #e8e8f0; /* Primary text */
+  --color-muted: #7070a0; /* Secondary text */
+  --color-highlight: #1a1a2e; /* Highlighted row/section bg */
+  --font-display: "Syne", sans-serif; /* Bold headings */
+  --font-body: "DM Mono", monospace; /* Body text — gives a dev aesthetic */
+  --font-ui: "Inter", sans-serif; /* UI elements only */
 }
 ```
 
@@ -730,13 +825,13 @@ git push -u origin main
 In `client/vite.config.js`:
 
 ```js
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: '/nadeem-portfolio/',   // Must match your GitHub repo name exactly
-})
+  base: "/nadeem-portfolio/", // Must match your GitHub repo name exactly
+});
 ```
 
 ### Deploy Scripts in `client/package.json`
@@ -772,7 +867,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install dependencies
         run: npm install
@@ -802,7 +897,7 @@ Use these prompts **in order** inside VS Code with GitHub Copilot Chat. Paste ea
 ### Prompt 1 — Project Bootstrap
 
 ```
-Set up a Vite + React project inside a folder called `client/`. 
+Set up a Vite + React project inside a folder called `client/`.
 Configure it with:
 - React 18
 - A `src/` folder with `components/`, `hooks/`, `styles/` subfolders
@@ -1151,7 +1246,7 @@ Update `client/index.html` to add:
 ```
 Configure the project for GitHub Pages deployment.
 
-1. In `client/vite.config.js`, set base to '/nadeem-portfolio/' 
+1. In `client/vite.config.js`, set base to '/Nadeem-Website/'
 2. In `client/package.json`, add:
    - "predeploy": "npm run build"
    - "deploy": "gh-pages -d dist"
@@ -1165,4 +1260,4 @@ Configure the project for GitHub Pages deployment.
 
 ---
 
-*End of development plan. Good luck, Nadeem — and congratulations on your upcoming graduation, God willing.*
+_End of development plan. Good luck, Nadeem — and congratulations on your upcoming graduation, God willing._
