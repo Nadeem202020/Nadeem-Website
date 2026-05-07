@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://nadeemmohamed.github.io/Nadeem-Website/",
   "scripts": {
     "start": "vite",
     "dev": "vite",
