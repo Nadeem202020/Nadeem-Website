@@ -50,7 +50,7 @@ export default function Navbar() {
             </button>
           ))}
           <a
-            href="/resume.pdf"
+            href={`${import.meta.env.BASE_URL}resume.pdf`}
             className="resume-button"
             target="_blank"
             rel="noopener noreferrer"
@@ -88,7 +88,7 @@ export default function Navbar() {
             </button>
           ))}
           <a
-            href="/resume.pdf"
+            href={`${import.meta.env.BASE_URL}resume.pdf`}
             className="mobile-resume-button"
             target="_blank"
             rel="noopener noreferrer"
