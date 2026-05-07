@@ -1,4 +1,4 @@
-import "./footer.css"; // or the correct relative path to your CSS file
+import "./Footer.css";
 
 export default function Footer({ meta }) {
   const currentYear = new Date().getFullYear();
