@@ -1,0 +1,460 @@
+{
+  "meta": {
+    "name": "Nadeem Mohamed Soliman",
+    "title": "Software Engineer",
+    "tagline": "Building backend systems, data pipelines, and AI applications.",
+    "email": "nadeem_mohammed@icloud.com",
+    "phone": "+20 100 955 9273",
+    "linkedin": "https://linkedin.com/in/nadeem-soliman",
+    "github": "https://github.com/Nadeem202020",
+    "location": "Cairo, Egypt",
+    "profilePhoto": "/profile.jpg",
+    "resumeUrl": "/resume.pdf"
+  },
+
+  "about": {
+    "summary": "Senior Computer Science and Engineering student at the German University in Cairo, graduating June 2026 with an A+ Bachelor's degree. I have shipped backend systems, data pipelines, and AI applications across banking, logistics, and enterprise software. I focus on building services that hold up under load, pipelines that don't need babysitting, and code that the next engineer can actually understand."
+  },
+
+  "education": {
+    "id": "edu-1",
+    "institution": "German University in Cairo (GUC)",
+    "degree": "Bachelor of Science in Computer Engineering and Science",
+    "period": "Sep 2021 – Jun 2026 (Expected)",
+    "gpa": "1.24 / 5.0",
+    "gpaNote": "Top of class — German grading scale where 1.0 is the highest possible grade",
+    "thesis": {
+      "title": "Vision Transformer Framework for Vehicle Intention Prediction",
+      "grade": "A+",
+      "description": "Trained a Vision Transformer (ViT) to predict vehicle maneuvers in autonomous driving scenarios, beating Uber's baseline LSTM model by 52.9%.",
+      "tech": ["PyTorch", "Python", "Argoverse 2"],
+      "period": "Feb 2025 – Jun 2025"
+    },
+    "coursework": [
+      "Cloud Computing",
+      "Data Structures and Algorithms",
+      "Operating Systems",
+      "Computer Networks",
+      "Database Systems",
+      "Network Security",
+      "Project Management"
+    ]
+  },
+
+  "experience": [
+    {
+      "id": "exp-1",
+      "company": "Turuq",
+      "role": "Software Engineer",
+      "type": "Full-time",
+      "period": "Oct 2025 – Present",
+      "bullets": [
+        "Built an embedded Shopify app in Remix, React, and Node.js connecting merchant stores to a logistics backend via Shopify Webhooks and GraphQL.",
+        "Shipped bulk waybill generation cutting manual processing time by 80% across all merchant accounts.",
+        "Contributed to a courier management service on Bun, Hono, Clerk, MongoDB, and Next.js for real-time order tracking.",
+        "Built a customer communication service on Meta Cloud API handling inbound/outbound messaging and HMAC-verified webhooks.",
+        "Unified WhatsApp, SMS, and email into a single modular TypeScript backend using inheritance and polymorphism."
+      ],
+      "tech": [
+        "Remix",
+        "React",
+        "Node.js",
+        "Shopify",
+        "GraphQL",
+        "Bun",
+        "Hono",
+        "MongoDB",
+        "TypeScript",
+        "Meta API"
+      ]
+    },
+    {
+      "id": "exp-2",
+      "company": "Ejada",
+      "role": "Backend Developer Intern",
+      "type": "Internship",
+      "period": "Aug 2025",
+      "bullets": [
+        "Built Spring Boot microservices for a virtual banking platform with Apache Kafka for async messaging.",
+        "Wired in WSO2 API Gateway for authenticated, rate-limited external routing.",
+        "Delivered REST APIs with OAuth 2.0 authentication and role-based access control."
+      ],
+      "tech": ["Spring Boot", "Apache Kafka", "WSO2", "OAuth 2.0", "Java"]
+    },
+    {
+      "id": "exp-3",
+      "company": "Link Development",
+      "role": "Backend Developer Intern",
+      "type": "Internship",
+      "period": "Jul 2025 – Aug 2025",
+      "bullets": [
+        "Integrated Keycloak SSO into OpenKM, consolidating identity management in a Dockerized MSSQL environment.",
+        "Built automated backup and recovery pipelines using Rclone for compliance and disaster recovery.",
+        "Wrote deployment documentation that cut engineer ramp-up time by 60%."
+      ],
+      "tech": ["Keycloak", "Docker", "MSSQL", "Rclone", "OpenKM"]
+    },
+    {
+      "id": "exp-4",
+      "company": "Electrolux",
+      "role": "System Development Intern",
+      "type": "Internship",
+      "period": "Aug 2024 – Sep 2024",
+      "bullets": [
+        "Built an automated quality tracking system in VBA (Excel and Access) replacing a fully manual process.",
+        "Cut data entry time by 70% while improving reporting accuracy."
+      ],
+      "tech": ["VBA", "Excel", "Access"]
+    },
+    {
+      "id": "exp-5",
+      "company": "QNB Egypt",
+      "role": "Full Stack Intern",
+      "type": "Internship",
+      "period": "Jul 2024",
+      "bullets": [
+        "Built a customer survey platform in Java, XHTML, and MySQL for branch teams to collect and review structured feedback."
+      ],
+      "tech": ["Java", "XHTML", "MySQL"]
+    },
+    {
+      "id": "exp-6",
+      "company": "BVS Company",
+      "role": "Technical Intern",
+      "type": "Internship",
+      "period": "Jul 2024 – Sep 2024",
+      "bullets": [
+        "Completed structured training in IBM DataPower API Gateway configuration, ACH payment processing, and enterprise banking security protocols."
+      ],
+      "tech": ["IBM DataPower", "ACH", "API Gateway"]
+    },
+    {
+      "id": "exp-7",
+      "company": "The Sparks Foundation",
+      "role": "Software Development Intern",
+      "type": "Internship",
+      "period": "Jul 2023",
+      "bullets": [
+        "Delivered a full-stack MERN banking app with user authentication, account management, and transaction history end-to-end in one month."
+      ],
+      "tech": ["MongoDB", "Express.js", "React", "Node.js"]
+    }
+  ],
+
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "Vision Transformer for Autonomous Vehicle Intention Prediction",
+      "category": "AI / ML",
+      "highlight": true,
+      "description": "Trained a ViT to predict vehicle maneuvers, beating Uber's LSTM baseline by 52.9% on Argoverse 2.",
+      "bullets": [
+        "Beat Uber's baseline LSTM model by 52.9%.",
+        "Handled data preprocessing and temporal feature extraction on the Argoverse 2 dataset."
+      ],
+      "tech": ["PyTorch", "Python", "Vision Transformers", "Argoverse 2"]
+    },
+    {
+      "id": "proj-2",
+      "title": "Massively Scalable Food Delivery Platform (Talabat-like)",
+      "category": "Backend",
+      "highlight": true,
+      "description": "Microservices-based food delivery platform with JWT auth, Redis caching, MongoDB audit logging, and distributed service communication.",
+      "bullets": [
+        "Owned User Service end-to-end with JWT auth, BCrypt hashing, and role-based access control.",
+        "Applied Observer design pattern for MongoDB audit logging without touching the business layer.",
+        "Added Redis caching layer with TTL expiration to reduce unnecessary database calls."
+      ],
+      "tech": ["Spring Boot", "PostgreSQL", "MongoDB", "Redis", "JWT"]
+    },
+    {
+      "id": "proj-3",
+      "title": "Agentic NDA Contract Analysis System",
+      "category": "AI / ML",
+      "highlight": true,
+      "description": "Fine-tuned Qwen with QLoRA on ContractNLI to classify legal hypotheses, with a vector embedding layer for semantic search over contract clauses.",
+      "bullets": [
+        "Fine-tuned Qwen using QLoRA on ContractNLI benchmark for 17 legal hypothesis classifications.",
+        "Built vector embedding layer for semantic search over contract clauses.",
+        "Focused on output reliability and consistency across real-world legal documents."
+      ],
+      "tech": ["LLMs", "QLoRA", "Agentic AI", "NLP", "Python"]
+    },
+    {
+      "id": "proj-4",
+      "title": "Real-Time Stock Analytics Platform",
+      "category": "Data Engineering",
+      "highlight": true,
+      "description": "End-to-end data pipeline with Kafka/PySpark streaming, Airflow orchestration, PostgreSQL storage, and a GenAI Text-to-SQL agent with Apache Superset dashboards.",
+      "bullets": [
+        "Built streaming pipeline with Kafka and PySpark orchestrated by Apache Airflow.",
+        "Integrated a GenAI Text-to-SQL agent using LangChain.",
+        "Built interactive dashboards with Apache Superset."
+      ],
+      "tech": [
+        "Kafka",
+        "Spark",
+        "Airflow",
+        "Docker",
+        "LangChain",
+        "PostgreSQL",
+        "Superset"
+      ]
+    },
+    {
+      "id": "proj-5",
+      "title": "Graph-RAG Travel Assistant",
+      "category": "AI / ML",
+      "highlight": false,
+      "description": "Knowledge graph from 50,000+ hotel reviews with Cypher-based retrieval, named entity recognition, SHAP/LIME explainability, and a Streamlit frontend.",
+      "bullets": [
+        "Built knowledge graph from 50,000+ hotel reviews with Cypher-based retrieval and NER.",
+        "Combined vector similarity search with graph traversal for grounded LLM answers.",
+        "Added SHAP and LIME explainability to ML models."
+      ],
+      "tech": ["Python", "Neo4j", "LangChain", "Streamlit", "SHAP", "LIME"]
+    },
+    {
+      "id": "proj-6",
+      "title": "All-in-One Vacation Platform",
+      "category": "Full Stack",
+      "highlight": false,
+      "description": "Full-stack travel booking platform with flight/hotel search, promo codes, Stripe payments, and Amadeus live booking integration.",
+      "bullets": [
+        "Integrated Stripe for payments and Amadeus for live booking data.",
+        "Built in an Agile team using Git and GitHub."
+      ],
+      "tech": [
+        "MongoDB",
+        "Express.js",
+        "React",
+        "Node.js",
+        "Stripe API",
+        "Amadeus API"
+      ]
+    },
+    {
+      "id": "proj-7",
+      "title": "University Academic System and Portal",
+      "category": "Backend",
+      "highlight": false,
+      "description": "Academic management system with 50+ stored procedures, views, triggers, and a role-based web portal for students, advisors, and administrators.",
+      "bullets": [
+        "Designed normalized relational schema with 50+ stored procedures, views, triggers, and functions.",
+        "Automated registration, graduation checks, and probation rules.",
+        "Built role-based portal for students, advisors, and administrators."
+      ],
+      "tech": ["SQL Server", "JavaScript", "HTML", "CSS"]
+    },
+    {
+      "id": "proj-8",
+      "title": "Embedded Auto Lane Detection",
+      "category": "Embedded",
+      "highlight": false,
+      "description": "Real-time lane detection system in C interfacing directly with hardware drivers for autonomous navigation.",
+      "bullets": [
+        "Built real-time lane detection in C with direct hardware driver integration."
+      ],
+      "tech": ["C", "Embedded Systems", "Hardware Integration"]
+    },
+    {
+      "id": "proj-9",
+      "title": "Athletic Tournament Management System",
+      "category": "Project Management",
+      "highlight": false,
+      "description": "Digital tournament management system for the German University in Cairo covering both students and staff, with comprehensive project documentation.",
+      "bullets": [
+        "Contributed to planning and initiation phase with formal Project Charter, Scope Statement, and Work Breakdown Structure.",
+        "Mapped stakeholder interests and set up Jira board simulation translating WBS elements into epics, tasks, and subtasks.",
+        "Delivered WBS with 3 levels of hierarchy and 10+ sub-activities following standard project management practices."
+      ],
+      "tech": ["Project Management", "Jira", "Stakeholder Analysis"]
+    },
+    {
+      "id": "proj-10",
+      "title": "Donation Ecosystem Platform",
+      "category": "Full Stack",
+      "highlight": false,
+      "description": "Platform connecting donors with NGOs, with responsive and accessible interface for seamless giving experiences.",
+      "bullets": [
+        "Participated in requirements gathering to understand donor and NGO needs.",
+        "Delivered a responsive, accessible React prototype with modern UI/UX patterns.",
+        "Implemented component architecture supporting scalable feature additions."
+      ],
+      "tech": ["React", "JavaScript", "Responsive Design", "Accessibility"]
+    },
+    {
+      "id": "proj-11",
+      "title": "The Last of Us: Legacy Game Engine",
+      "category": "Backend",
+      "highlight": false,
+      "description": "Turn-based survival game in Java demonstrating OOP principles, MVC architecture, and comprehensive exception handling.",
+      "bullets": [
+        "Built turn-based survival game engine using Java OOP principles and MVC architecture.",
+        "Implemented custom GUI with grid-based map system for strategic gameplay.",
+        "Applied thorough exception handling and defensive programming patterns."
+      ],
+      "tech": ["Java", "OOP", "Game Development", "MVC Architecture"]
+    }
+  ],
+
+  "skills": {
+    "categories": [
+      {
+        "name": "Backend & APIs",
+        "skills": [
+          "Java",
+          "Spring Boot",
+          "Node.js",
+          "Express.js",
+          "Microservices",
+          "REST APIs",
+          "GraphQL",
+          "OAuth 2.0",
+          "Event-Driven Architecture",
+          "WSO2"
+        ]
+      },
+      {
+        "name": "AI & Machine Learning",
+        "skills": [
+          "PyTorch",
+          "Scikit-learn",
+          "Computer Vision",
+          "NLP",
+          "Vision Transformers",
+          "QLoRA",
+          "Hyperparameter Tuning (Optuna)",
+          "TensorFlow"
+        ]
+      },
+      {
+        "name": "Data Engineering",
+        "skills": [
+          "Apache Kafka",
+          "Apache Spark (PySpark)",
+          "Apache Airflow",
+          "ETL Pipelines",
+          "Stream Processing",
+          "Apache Superset"
+        ]
+      },
+      {
+        "name": "Databases & Graph",
+        "skills": [
+          "PostgreSQL",
+          "MySQL",
+          "MongoDB",
+          "MSSQL",
+          "Redis",
+          "Neo4j",
+          "SQL Optimization",
+          "Knowledge Graphs"
+        ]
+      },
+      {
+        "name": "Cloud & DevOps",
+        "skills": [
+          "Docker",
+          "Git",
+          "GitHub",
+          "Linux",
+          "GCP",
+          "AWS (EC2, S3, RDS)",
+          "CI/CD Pipelines",
+          "IBM DataPower",
+          "Kubernetes"
+        ]
+      },
+      {
+        "name": "Frontend",
+        "skills": ["React", "Remix", "TypeScript", "JavaScript", "HTML", "CSS"]
+      },
+      {
+        "name": "Languages",
+        "skills": [
+          "Python",
+          "Java",
+          "TypeScript",
+          "JavaScript",
+          "C",
+          "C++",
+          "SQL"
+        ]
+      },
+      {
+        "name": "Concepts",
+        "skills": [
+          "Distributed Systems",
+          "System Design",
+          "Design Patterns",
+          "RAG Systems",
+          "OOP",
+          "Data Structures",
+          "Algorithms",
+          "Agile/Scrum"
+        ]
+      }
+    ]
+  },
+
+  "certifications": [
+    {
+      "title": "Data Structures and Algorithms",
+      "issuer": "Microsoft",
+      "date": "November 2025"
+    },
+    {
+      "title": "Web Development",
+      "issuer": "Microsoft & Sprints",
+      "date": "October 2025"
+    },
+    {
+      "title": "Machine Learning and AI",
+      "issuer": "Microsoft & Sprints",
+      "date": "September 2025"
+    },
+    {
+      "title": "DevOps",
+      "issuer": "Microsoft & Sprints",
+      "date": "August 2025"
+    },
+    {
+      "title": "Google Cloud Fundamentals: Core Infrastructure",
+      "issuer": "Google Cloud",
+      "date": "2024"
+    },
+    {
+      "title": "Essential Google Cloud Infrastructure: Foundation",
+      "issuer": "Google Cloud",
+      "date": "2024"
+    },
+    {
+      "title": "Essential Google Cloud Infrastructure: Core Services",
+      "issuer": "Google Cloud",
+      "date": "2024"
+    }
+  ],
+
+  "volunteering": [
+    {
+      "id": "vol-1",
+      "role": "Director, Juniors Technical Program",
+      "organization": "IEEE GUC Student Branch",
+      "period": "Sep 2024 – Jul 2025",
+      "bullets": [
+        "Led the technical program, coordinating a team to plan and run 36 technical sessions across the academic year.",
+        "Nearly 50 students learned from the program."
+      ]
+    },
+    {
+      "id": "vol-2",
+      "role": "Junior Teaching Assistant",
+      "organization": "GUC — Introduction to Programming (CSEN 102)",
+      "period": "Sep 2023 – Jan 2024",
+      "bullets": [
+        "Ran weekly Python lab sessions for 20+ students covering data structures, algorithms, and OOP."
+      ]
+    }
+  ]
+}
