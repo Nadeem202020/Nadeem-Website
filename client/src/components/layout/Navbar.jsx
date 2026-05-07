@@ -6,6 +6,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navLinks = [
+    { id: "hero" },
     { label: "About", id: "about" },
     { label: "Experience", id: "experience" },
     { label: "Projects", id: "projects" },
@@ -36,7 +37,14 @@ export default function Navbar() {
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
         {/* Logo */}
-        <div className="navbar-logo">NM</div>
+        <div
+          className="navbar-logo"
+          onClick={() => {
+            scrollToSection("hero");
+          }}
+        >
+          NM
+        </div>
 
         {/* Desktop Navigation */}
         <div className="nav-links-desktop">
