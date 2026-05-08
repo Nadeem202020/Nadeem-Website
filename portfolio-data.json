@@ -9,7 +9,7 @@
     "github": "https://github.com/Nadeem202020",
     "location": "Cairo, Egypt",
     "profilePhoto": "/Nadeem-Website/profile.jpg",
-    "resumeUrl": "/Nadeem-Website/resume.pdf"
+    "resumeUrl": "/Nadeem-Website/portfolio.pdf"
   },
 
   "about": {
@@ -46,7 +46,7 @@
       "id": "exp-1",
       "company": "Turuq",
       "role": "Software Engineer",
-      "type": "Full-time",
+      "type": "Part-time",
       "period": "Oct 2025 – Present",
       "bullets": [
         "Built an embedded Shopify app in Remix, React, and Node.js connecting merchant stores to a logistics backend via Shopify Webhooks and GraphQL.",
