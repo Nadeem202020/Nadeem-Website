@@ -7,52 +7,32 @@ const titles = ["Software Engineer", "Backend Developer", "AI Enthusiast"];
 export default function Hero({ meta }) {
   const sectionRef = useRef(null);
   const audioCtxRef = useRef(null);
-  const audioBufferRef = useRef(null);
   const [titleIndex, setTitleIndex] = useState(0);
   const [displayedTitle, setDisplayedTitle] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+  const [audioReady, setAudioReady] = useState(false); // tracks if audio is unlocked
   const isVisible = useScrollAnimation(sectionRef, {
     threshold: 0.15,
     triggerOnce: false,
   });
 
-  const playSound = (deleting = false) => {
+  const initAudio = () => {
+    if (audioCtxRef.current) return; // already initialized
     try {
-      // Don't play when section is not visible
-      if (!isVisible) return;
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      audioCtxRef.current = new AudioCtx();
+      audioCtxRef.current.resume().then(() => setAudioReady(true));
+    } catch (e) {
+      // AudioContext not supported
+    }
+  };
 
-      if (!audioCtxRef.current) {
-        const AudioCtx = window.AudioContext || window.webkitAudioContext;
-        audioCtxRef.current = new AudioCtx();
-      }
+  const playSound = (deleting = false) => {
+    const ctx = audioCtxRef.current;
+    if (!ctx || ctx.state !== "running") return;
 
-      const ctx = audioCtxRef.current;
-      // If context is suspended (Chrome autoplay policy) don't try to play here.
-      if (ctx.state !== "running") return;
-
+    try {
       const now = ctx.currentTime;
-
-      // If we have a decoded paper sound sample, play a short slice of it.
-      if (audioBufferRef.current) {
-        const src = ctx.createBufferSource();
-        const g = ctx.createGain();
-        src.buffer = audioBufferRef.current;
-        // Slightly vary pitch for deleting vs typing
-        src.playbackRate.value = deleting ? 0.9 : 1.05;
-        src.connect(g);
-        g.connect(ctx.destination);
-
-        g.gain.setValueAtTime(0.0001, now);
-        g.gain.exponentialRampToValueAtTime(0.06, now + 0.01);
-        g.gain.exponentialRampToValueAtTime(0.0001, now + 0.12);
-
-        src.start(now, 0, 0.12);
-        // no need to call stop if duration provided, but schedule safety
-        src.stop(now + 0.13);
-        return;
-      }
-
-      // Fallback oscillator (keeps existing behavior if sample not available)
       const o = ctx.createOscillator();
       const g = ctx.createGain();
       o.connect(g);
@@ -68,68 +48,39 @@ export default function Hero({ meta }) {
       o.start(now);
       o.stop(now + 0.09);
     } catch (e) {
-      // silently fail if AudioContext is not available
+      // silently fail
     }
   };
 
-  // Ensure AudioContext is created/resumed on first user gesture (Chrome autoplay rules)
+  // Unlock audio on first interaction anywhere on the page
   useEffect(() => {
-    const resumeHandler = () => {
-      try {
-        if (!audioCtxRef.current) {
-          const AudioCtx = window.AudioContext || window.webkitAudioContext;
-          audioCtxRef.current = new AudioCtx();
-        }
-        if (audioCtxRef.current.state === "suspended") {
-          audioCtxRef.current.resume().catch(() => {});
-        }
-        // Try to load a paper-scratch sample from public/ for a more natural sound
-        try {
-          const base = import.meta.env.BASE_URL || "/";
-          const url = `${base}paper-scratch.mp3`;
-          fetch(url)
-            .then((r) => {
-              if (!r.ok) throw new Error("no sample");
-              return r.arrayBuffer();
-            })
-            .then((ab) => audioCtxRef.current.decodeAudioData(ab))
-            .then((buf) => {
-              audioBufferRef.current = buf;
-            })
-            .catch(() => {
-              // ignore if sample missing or decode fails
-            });
-        } catch (e) {
-          // ignore
-        }
-      } catch (e) {
-        // ignore
-      }
+    const unlock = () => {
+      initAudio();
+      window.removeEventListener("click", unlock);
+      window.removeEventListener("keydown", unlock);
+      window.removeEventListener("touchstart", unlock);
+      window.removeEventListener("scroll", unlock); // scroll also counts as interaction
     };
 
-    window.addEventListener("click", resumeHandler, { once: true });
-    window.addEventListener("keydown", resumeHandler, { once: true });
+    window.addEventListener("click", unlock, { passive: true });
+    window.addEventListener("keydown", unlock, { passive: true });
+    window.addEventListener("touchstart", unlock, { passive: true });
+    window.addEventListener("scroll", unlock, { passive: true }); // catches mobile swipe-to-scroll
 
     return () => {
-      try {
-        if (audioCtxRef.current) {
-          audioCtxRef.current.close().catch(() => {});
-          audioCtxRef.current = null;
-        }
-      } catch (e) {
-        // ignore
-      }
-      window.removeEventListener("click", resumeHandler);
-      window.removeEventListener("keydown", resumeHandler);
+      window.removeEventListener("click", unlock);
+      window.removeEventListener("keydown", unlock);
+      window.removeEventListener("touchstart", unlock);
+      window.removeEventListener("scroll", unlock);
     };
   }, []);
 
   useEffect(() => {
-    // Pause the typewriter when the hero isn't visible so it preserves state
     if (!isVisible) return;
 
     const currentTitle = titles[titleIndex];
     let deleteTimer = null;
+
     const timer = setTimeout(
       () => {
         if (isDeleting) {
@@ -159,13 +110,10 @@ export default function Hero({ meta }) {
       clearTimeout(timer);
       if (deleteTimer) clearTimeout(deleteTimer);
     };
-  }, [displayedTitle, isDeleting, titleIndex, isVisible]);
+  }, [displayedTitle, isDeleting, titleIndex, isVisible, audioReady]);
 
   const scrollToProjects = () => {
-    const element = document.getElementById("projects");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -188,14 +136,14 @@ export default function Hero({ meta }) {
           <button className="btn btn-primary" onClick={scrollToProjects}>
             View Projects
           </button>
-          {/* <a
-            href={`${import.meta.env.BASE_URL}resume.pdf`}
+          <a
+            href={`${import.meta.env.BASE_URL}portfolio.pdf`}
             className="btn btn-secondary"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Download Resume
-          </a> */}
+            Download Portfolio
+          </a>
         </div>
       </div>
     </section>

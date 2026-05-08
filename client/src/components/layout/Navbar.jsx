@@ -59,12 +59,12 @@ export default function Navbar() {
             </button>
           ))}
           <a
-            href={`${import.meta.env.BASE_URL}resume.pdf`}
+            href={`${import.meta.env.BASE_URL}portfolio.pdf`}
             className="resume-button"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Resume
+            Portfolio
           </a>
         </div>
 
@@ -97,7 +97,7 @@ export default function Navbar() {
             </button>
           ))}
           <a
-            href={`${import.meta.env.BASE_URL}resume.pdf`}
+            href={`${import.meta.env.BASE_URL}portfolio.pdf`}
             className="mobile-resume-button"
             target="_blank"
             rel="noopener noreferrer"
