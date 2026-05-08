@@ -103,7 +103,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
           >
-            Resume
+            Portfolio
           </a>
         </div>
       )}
