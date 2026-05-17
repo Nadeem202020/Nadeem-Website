@@ -49,11 +49,12 @@
       "type": "Part-time",
       "period": "Oct 2025 – Present",
       "bullets": [
-        "Built an embedded Shopify app in Remix, React, and Node.js connecting merchant stores to a logistics backend via Shopify Webhooks and GraphQL.",
-        "Shipped bulk waybill generation cutting manual processing time by 80% across all merchant accounts.",
-        "Contributed to a courier management service on Bun, Hono, Clerk, MongoDB, and Next.js for real-time order tracking.",
-        "Built a customer communication service on Meta Cloud API handling inbound/outbound messaging and HMAC-verified webhooks.",
-        "Unified WhatsApp, SMS, and email into a single modular TypeScript backend using inheritance and polymorphism."
+        "Built an embedded Shopify app in Remix, React, and Node.js that connects merchant stores to a logistics backend via Shopify Webhooks and GraphQL, with real-time order events across multiple accounts.",
+        "Shipped a bulk waybill generation feature that automated the full shipment creation workflow, cutting manual processing time by 80% across all merchant accounts.",
+        "Contributed to a courier management service on Bun, Hono, Clerk, MongoDB, and Next.js for real-time order tracking and courier dispatch.",
+        "Built a customer communication service on top of the Meta Cloud API for inbound and outbound messaging, conversation state across multi-step flows, and order confirmations via HMAC-verified webhooks.",
+        "Consolidated WhatsApp, SMS, and email into a single modular TypeScript backend using inheritance and polymorphism, so new channels can be added without touching existing integrations.",
+        "Built a black-box integration test suite in Vitest and Supertest that exercises the communication service purely over HTTP, asserting response shapes, MongoDB side effects, and outbound Graph API calls against a local Express mock."
       ],
       "tech": [
         "Remix",
@@ -75,9 +76,8 @@
       "type": "Internship",
       "period": "Aug 2025",
       "bullets": [
-        "Built Spring Boot microservices for a virtual banking platform with Apache Kafka for async messaging.",
-        "Wired in WSO2 API Gateway for authenticated, rate-limited external routing.",
-        "Delivered REST APIs with OAuth 2.0 authentication and role-based access control."
+        "Built Spring Boot microservices for a virtual banking platform with Apache Kafka for async inter-service messaging and WSO2 API Gateway for authenticated, rate-limited external routing.",
+        "Delivered REST APIs for mobile and web banking clients with OAuth 2.0 authentication, role-based access control, and request validation across all endpoints."
       ],
       "tech": ["Spring Boot", "Apache Kafka", "WSO2", "OAuth 2.0", "Java"]
     },
@@ -88,9 +88,9 @@
       "type": "Internship",
       "period": "Jul 2025 – Aug 2025",
       "bullets": [
-        "Integrated Keycloak SSO into OpenKM, consolidating identity management in a Dockerized MSSQL environment.",
+        "Integrated Keycloak SSO into OpenKM, replacing a fragmented login system and consolidating identity management inside a Dockerized MSSQL environment.",
         "Built automated backup and recovery pipelines using Rclone for compliance and disaster recovery.",
-        "Wrote deployment documentation that cut engineer ramp-up time by 60%."
+        "Wrote deployment and onboarding documentation that became the team's standard reference, cutting engineer ramp-up time by 60%."
       ],
       "tech": ["Keycloak", "Docker", "MSSQL", "Rclone", "OpenKM"]
     },
@@ -101,8 +101,7 @@
       "type": "Internship",
       "period": "Aug 2024 – Sep 2024",
       "bullets": [
-        "Built an automated quality tracking system in VBA (Excel and Access) replacing a fully manual process.",
-        "Cut data entry time by 70% while improving reporting accuracy."
+        "Built an automated quality tracking system in VBA (Excel and Access) for the production floor, replacing a fully manual process and cutting data entry time by 70% with more accurate reporting."
       ],
       "tech": ["VBA", "Excel", "Access"]
     },
@@ -113,7 +112,7 @@
       "type": "Internship",
       "period": "Jul 2024",
       "bullets": [
-        "Built a customer survey platform in Java, XHTML, and MySQL for branch teams to collect and review structured feedback."
+        "Built a customer survey platform in Java, XHTML, and MySQL that let branch teams collect, store, and review structured feedback."
       ],
       "tech": ["Java", "XHTML", "MySQL"]
     },
@@ -124,7 +123,7 @@
       "type": "Internship",
       "period": "Jul 2024 – Sep 2024",
       "bullets": [
-        "Completed structured training in IBM DataPower API Gateway configuration, ACH payment processing, and enterprise banking security protocols."
+        "Trained on IBM DataPower API Gateway configuration, ACH payment processing, and enterprise banking security protocols."
       ],
       "tech": ["IBM DataPower", "ACH", "API Gateway"]
     },
@@ -135,7 +134,7 @@
       "type": "Internship",
       "period": "Jul 2023",
       "bullets": [
-        "Delivered a full-stack MERN banking app with user authentication, account management, and transaction history end-to-end in one month."
+        "Delivered a full-stack MERN banking app with user authentication, account management, and transaction history, end to end in one month."
       ],
       "tech": ["MongoDB", "Express.js", "React", "Node.js"]
     }
@@ -159,16 +158,11 @@
       "title": "Massively Scalable Food Delivery Platform (Talabat-like)",
       "category": "Backend",
       "highlight": true,
-      "description": "Microservices-based food delivery backend with per-service databases, eventing, caching, and Kubernetes deployment.",
+      "description": "Distributed food delivery backend across microservices for customers, restaurants, and drivers; owned the User Service end to end.",
       "bullets": [
-        "Contributed to a distributed food delivery backend across microservices for customers, restaurants, and drivers, each with its own database communicating through explicit APIs.",
-        "Owned the User Service: JWT auth, BCrypt password hashing, and role-based access control for CUSTOMER and ADMIN roles.",
-        "Used the Observer pattern to plug MongoDB audit logging into the event layer without touching business logic.",
-        "Added Redis caching with TTL expiration and write-through invalidation to cut unnecessary database calls.",
-        "Replaced shared-table SQL joins with Feign clients to OrderService and CheckoutService for order summaries, active-order checks, and payment totals.",
-        "Published \"user.registered\" and \"user.deactivated\" events over RabbitMQ, and wrote idempotent Saga consumers to update user stats on \"order.completed\" / \"order.cancelled\", with a DLQ and three-attempt retry.",
-        "Deployed the User Service on Kubernetes with health probes, a headless StatefulSet for Postgres, and separate ConfigMap and Secret manifests.",
-        "Added Prometheus metrics, structured Loki4J logs with correlationId/userId MDC fields, and a Grafana dashboard with three PromQL panels."
+        "Contributed to a distributed food delivery backend across microservices for customers, restaurants, and drivers; owned the User Service end to end: JWT auth, BCrypt password hashing, and role-based access control.",
+        "Replaced shared-table SQL joins with Feign clients, published domain events over RabbitMQ, and wrote idempotent Saga consumers to update user stats on order completion and cancellation, backed by a DLQ with three-attempt retry.",
+        "Deployed the User Service on Kubernetes with health probes and a headless StatefulSet for Postgres, and added Prometheus metrics with a Grafana dashboard and structured Loki4J logs with MDC fields."
       ],
       "tech": [
         "Spring Boot",
@@ -178,9 +172,7 @@
         "RabbitMQ",
         "Feign",
         "Kubernetes",
-        "Prometheus",
-        "JWT",
-        "BCrypt"
+        "Prometheus"
       ]
     },
     {
@@ -188,51 +180,50 @@
       "title": "Agentic NDA Contract Analysis System",
       "category": "AI / ML",
       "highlight": true,
-      "description": "Agentic contract review pipeline combining fine-tuned LLMs, semantic search, and orchestration for reliable legal classifications.",
+      "description": "Agentic contract review pipeline with reasoning, policy, orchestration, and logging components.",
       "bullets": [
         "Contributed to a 5-member team building an agentic contract review pipeline with reasoning, policy, orchestration, and logging components.",
         "Fine-tuned a Qwen model using QLoRA on the ContractNLI benchmark to classify 17 legal hypotheses per contract as ENTAILED, CONTRADICTED, or NOT MENTIONED.",
-        "Built the vector embedding layer for semantic search over contract clauses."
+        "Built the vector embedding layer for semantic search over contract clauses, focusing on output reliability across real-world legal documents."
       ],
-      "tech": ["LLMs", "QLoRA", "Agentic AI", "NLP", "Python"]
+      "tech": ["LLMs", "QLoRA", "Agentic AI", "NLP"]
     },
     {
       "id": "proj-4",
       "title": "DDoS Mitigation Tool",
       "category": "Security / Networking",
       "highlight": false,
-      "description": "End-to-end DDoS detection and graduated mitigation pipeline with kernel-level enforcement and recovery.",
+      "description": "Tool that detects and blocks DDoS attacks in real time.",
       "bullets": [
-        "Contributed to an end-to-end DDoS detection and mitigation pipeline as the Mitigation & Firewall engineer on a four-person team.",
-        "Built a graduated response engine stepping traffic through MONITOR → SOFT_RATE_LIMIT → BLOCK based on consecutive attack windows, with automatic recovery when traffic normalizes.",
-        "Implemented a token bucket rate limiter with per-IP and global limits, burst allowance, and dynamic tightening under escalating attacks.",
-        "Wrote an IP scoring system using z-score deviation and consistency history to target sustained attackers rather than blocking all high-traffic sources.",
-        "Integrated with Linux iptables for kernel-level packet dropping, with whitelist support and dry-run fallback when root access is unavailable."
+        "Contributed to a tool that detects and blocks DDoS attacks in real time, working as the mitigation engineer on a four-person team.",
+        "Built the response engine that watches incoming traffic and automatically steps up from monitoring to rate limiting to blocking IPs as an attack progresses.",
+        "Integrated with Linux iptables to drop malicious traffic at the kernel level, with a scoring system to avoid blocking legitimate users."
       ],
       "tech": ["Python", "iptables", "Docker"]
     },
     {
       "id": "proj-5",
       "title": "Athletic Tournament Management System",
-      "category": "Project Management",
+      "category": "IT Project Management",
       "highlight": false,
-      "description": "Digital tournament management system for the German University in Cairo covering both students and staff, with comprehensive project documentation.",
+      "description": "Digital tournament management system for GUC students and staff.",
       "bullets": [
         "Contributed to the planning phase of a digital tournament management system for GUC students and staff.",
         "Delivered a Project Charter, Scope Statement, and a three-level Work Breakdown Structure with 10+ sub-activities.",
         "Mapped stakeholder interests and set up a Jira board simulation translating WBS elements into epics, tasks, and subtasks with owners and dependencies."
       ],
-      "tech": ["Project Management", "Jira", "Stakeholder Analysis"]
+      "tech": ["IT Project Management"]
     },
     {
       "id": "proj-6",
       "title": "Real-Time Stock Analytics Platform",
       "category": "Data Engineering",
       "highlight": true,
-      "description": "End-to-end data pipeline with Kafka/PySpark streaming, Airflow orchestration, PostgreSQL storage, and a GenAI Text-to-SQL agent with Apache Superset dashboards.",
+      "description": "End-to-end data pipeline with Kafka/PySpark streaming, Airflow orchestration, PostgreSQL storage, and a LangChain Text-to-SQL agent.",
       "bullets": [
         "Contributed to a data pipeline using Airflow for orchestration and Kafka with PySpark for real-time market data streaming.",
-        "Stored processed data in PostgreSQL, helped integrate a LangChain Text-to-SQL agent, and built dashboards with Apache Superset."
+        "Stored processed data in PostgreSQL and helped integrate a LangChain Text-to-SQL agent for natural language querying.",
+        "Built interactive dashboards with Apache Superset to visualize streaming market data and pipeline metrics."
       ],
       "tech": [
         "Kafka",
@@ -249,12 +240,13 @@
       "title": "Graph-RAG Travel Assistant",
       "category": "AI / ML",
       "highlight": false,
-      "description": "Knowledge graph from 50,000+ hotel reviews with Cypher-based retrieval, named entity recognition, SHAP/LIME explainability, and a Streamlit frontend.",
+      "description": "Knowledge graph from 50,000+ hotel reviews with Cypher-based retrieval, named entity recognition, and a Streamlit frontend.",
       "bullets": [
-        "Contributed to a knowledge graph built from 50,000+ hotel reviews, with Cypher-based retrieval, named entity recognition, and a Streamlit frontend.",
-        "Helped design the retrieval layer combining vector similarity search with graph traversal to ground LLM answers in structured data. Added SHAP and LIME explainability to the ML models."
+        "Contributed to a knowledge graph built from 50,000+ hotel reviews with named entity recognition and a Streamlit frontend.",
+        "Helped design a retrieval layer combining vector similarity search with Cypher-based graph traversal to ground LLM answers in structured data.",
+        "Added SHAP and LIME explainability to the ML models to make recommendations interpretable."
       ],
-      "tech": ["Python", "Neo4j", "LangChain", "Streamlit", "SHAP", "LIME"]
+      "tech": ["Python", "Neo4j", "LangChain"]
     },
     {
       "id": "proj-8",
@@ -264,14 +256,15 @@
       "description": "Full-stack travel booking platform with flight/hotel search, promo codes, Stripe payments, and Amadeus live booking integration.",
       "bullets": [
         "Contributed to a full-stack travel booking platform where users can search flights and hotels, apply promo codes, and get personalized recommendations.",
-        "Worked in an Agile team integrating Stripe for payments and Amadeus for live booking data."
+        "Integrated Stripe for payments and Amadeus for live flight and hotel booking data.",
+        "Worked in an Agile team using Git and GitHub, contributing across the MERN stack from API design to frontend components."
       ],
       "tech": [
         "MongoDB",
         "Express.js",
         "React",
         "Node.js",
-        "Stripe API",
+        "Stripe",
         "Amadeus API"
       ]
     },
@@ -280,21 +273,24 @@
       "title": "Embedded Auto Lane Detection",
       "category": "Embedded",
       "highlight": false,
-      "description": "Real-time lane detection system in C interfacing directly with hardware drivers for autonomous navigation.",
+      "description": "Real-time lane detection system in C interfacing directly with hardware drivers on an embedded platform.",
       "bullets": [
-        "Contributed to a real-time lane detection system in C that interfaced with hardware drivers to support autonomous navigation on an embedded platform."
+        "Contributed to a real-time lane detection system in C that interfaced directly with hardware drivers on an embedded platform.",
+        "Helped implement the image processing logic to identify lane boundaries and feed steering signals to the navigation layer.",
+        "Tested the system under varying lighting and road conditions to check detection reliability."
       ],
-      "tech": ["C", "Embedded Systems", "Hardware Integration"]
+      "tech": ["C", "Hardware Integration"]
     },
     {
       "id": "proj-10",
       "title": "University Academic System and Portal",
       "category": "Backend",
       "highlight": false,
-      "description": "Academic management system with 50+ stored procedures, views, triggers, and a role-based web portal for students, advisors, and administrators.",
+      "description": "Academic management system with 50+ stored procedures, views, triggers, and functions.",
       "bullets": [
-        "Contributed to an academic management system with a normalized relational schema and 50+ stored procedures, views, triggers, and functions covering registration, graduation checks, and probation rules.",
-        "Helped build a role-based web portal for students, advisors, and administrators."
+        "Contributed to an academic management system with a normalized relational schema and 50+ stored procedures, views, triggers, and functions.",
+        "Automated registration, graduation checks, and probation rules at the database layer to enforce business logic consistently.",
+        "Helped build a role-based web portal with separate views and permissions for students, advisors, and administrators."
       ],
       "tech": ["SQL Server", "JavaScript", "HTML", "CSS"]
     },
@@ -303,9 +299,11 @@
       "title": "Donation Ecosystem Platform",
       "category": "Full Stack",
       "highlight": false,
-      "description": "Platform connecting donors with NGOs, with responsive and accessible interface for seamless giving experiences.",
+      "description": "Platform connecting donors with NGOs.",
       "bullets": [
-        "Contributed to a platform connecting donors with NGOs, took part in requirements gathering, and helped deliver a responsive React prototype."
+        "Contributed to a platform connecting donors with NGOs, taking part in requirements gathering and system design.",
+        "Helped deliver a responsive, accessible React prototype covering donor registration, campaign browsing, and NGO profiles.",
+        "Coordinated with teammates to align UI components with the agreed data model and user flows."
       ],
       "tech": ["React", "JavaScript", "Responsive Design", "Accessibility"]
     },
@@ -314,9 +312,11 @@
       "title": "The Last of Us: Legacy Game Engine",
       "category": "Backend",
       "highlight": false,
-      "description": "Turn-based survival game in Java demonstrating OOP principles, MVC architecture, and comprehensive exception handling.",
+      "description": "Turn-based survival game in Java applying OOP principles and MVC architecture.",
       "bullets": [
-        "Contributed to a turn-based survival game in Java using OOP and MVC, with a custom GUI, grid-based map, and exception handling."
+        "Contributed to a turn-based survival game in Java applying OOP principles and MVC architecture.",
+        "Helped build the game loop, grid-based map, and entity interaction system covering players, zombies, and collectibles.",
+        "Implemented a custom GUI and thorough exception handling to keep the game state consistent across edge cases."
       ],
       "tech": ["Java", "OOP", "Game Development", "MVC Architecture"]
     }
@@ -348,6 +348,7 @@
           "NLP",
           "Vision Transformers",
           "QLoRA",
+          "Model Training & Optimization",
           "Hyperparameter Tuning (Optuna)",
           "TensorFlow"
         ]
@@ -359,6 +360,7 @@
           "Apache Spark (PySpark)",
           "Apache Airflow",
           "ETL Pipelines",
+          "Data Warehousing",
           "Stream Processing",
           "Apache Superset"
         ]
@@ -373,6 +375,7 @@
           "Redis",
           "Neo4j",
           "SQL Optimization",
+          "B+ Tree Indexing",
           "Knowledge Graphs"
         ]
       },
@@ -392,7 +395,15 @@
       },
       {
         "name": "Frontend",
-        "skills": ["React", "Remix", "TypeScript", "JavaScript", "HTML", "CSS"]
+        "skills": [
+          "React",
+          "Remix",
+          "TypeScript",
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "Streamlit"
+        ]
       },
       {
         "name": "Languages",
@@ -416,6 +427,7 @@
           "OOP",
           "Data Structures",
           "Algorithms",
+          "Networking",
           "Agile/Scrum"
         ]
       }
@@ -455,6 +467,11 @@
     },
     {
       "title": "Essential Google Cloud Infrastructure: Core Services",
+      "issuer": "Google Cloud",
+      "date": "2026"
+    },
+    {
+      "title": "Getting Started with Google Kubernetes Engine",
       "issuer": "Google Cloud",
       "date": "2026"
     }
