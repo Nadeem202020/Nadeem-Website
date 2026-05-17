@@ -11,6 +11,7 @@ const categories = [
   "Full Stack",
   "Embedded",
   "Project Management",
+  "Security / Networking",
 ];
 
 export default function Projects({ projects }) {

@@ -159,37 +159,80 @@
       "title": "Massively Scalable Food Delivery Platform (Talabat-like)",
       "category": "Backend",
       "highlight": true,
-      "description": "Microservices-based food delivery platform with JWT auth, Redis caching, MongoDB audit logging, and distributed service communication.",
+      "description": "Microservices-based food delivery backend with per-service databases, eventing, caching, and Kubernetes deployment.",
       "bullets": [
-        "Owned User Service end-to-end with JWT auth, BCrypt hashing, and role-based access control.",
-        "Applied Observer design pattern for MongoDB audit logging without touching the business layer.",
-        "Added Redis caching layer with TTL expiration to reduce unnecessary database calls."
+        "Contributed to a distributed food delivery backend across microservices for customers, restaurants, and drivers, each with its own database communicating through explicit APIs.",
+        "Owned the User Service: JWT auth, BCrypt password hashing, and role-based access control for CUSTOMER and ADMIN roles.",
+        "Used the Observer pattern to plug MongoDB audit logging into the event layer without touching business logic.",
+        "Added Redis caching with TTL expiration and write-through invalidation to cut unnecessary database calls.",
+        "Replaced shared-table SQL joins with Feign clients to OrderService and CheckoutService for order summaries, active-order checks, and payment totals.",
+        "Published \"user.registered\" and \"user.deactivated\" events over RabbitMQ, and wrote idempotent Saga consumers to update user stats on \"order.completed\" / \"order.cancelled\", with a DLQ and three-attempt retry.",
+        "Deployed the User Service on Kubernetes with health probes, a headless StatefulSet for Postgres, and separate ConfigMap and Secret manifests.",
+        "Added Prometheus metrics, structured Loki4J logs with correlationId/userId MDC fields, and a Grafana dashboard with three PromQL panels."
       ],
-      "tech": ["Spring Boot", "PostgreSQL", "MongoDB", "Redis", "JWT"]
+      "tech": [
+        "Spring Boot",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "RabbitMQ",
+        "Feign",
+        "Kubernetes",
+        "Prometheus",
+        "JWT",
+        "BCrypt"
+      ]
     },
     {
       "id": "proj-3",
       "title": "Agentic NDA Contract Analysis System",
       "category": "AI / ML",
       "highlight": true,
-      "description": "Fine-tuned Qwen with QLoRA on ContractNLI to classify legal hypotheses, with a vector embedding layer for semantic search over contract clauses.",
+      "description": "Agentic contract review pipeline combining fine-tuned LLMs, semantic search, and orchestration for reliable legal classifications.",
       "bullets": [
-        "Fine-tuned Qwen using QLoRA on ContractNLI benchmark for 17 legal hypothesis classifications.",
-        "Built vector embedding layer for semantic search over contract clauses.",
-        "Focused on output reliability and consistency across real-world legal documents."
+        "Contributed to a 5-member team building an agentic contract review pipeline with reasoning, policy, orchestration, and logging components.",
+        "Fine-tuned a Qwen model using QLoRA on the ContractNLI benchmark to classify 17 legal hypotheses per contract as ENTAILED, CONTRADICTED, or NOT MENTIONED.",
+        "Built the vector embedding layer for semantic search over contract clauses."
       ],
       "tech": ["LLMs", "QLoRA", "Agentic AI", "NLP", "Python"]
     },
     {
       "id": "proj-4",
+      "title": "DDoS Mitigation Tool",
+      "category": "Security / Networking",
+      "highlight": false,
+      "description": "End-to-end DDoS detection and graduated mitigation pipeline with kernel-level enforcement and recovery.",
+      "bullets": [
+        "Contributed to an end-to-end DDoS detection and mitigation pipeline as the Mitigation & Firewall engineer on a four-person team.",
+        "Built a graduated response engine stepping traffic through MONITOR → SOFT_RATE_LIMIT → BLOCK based on consecutive attack windows, with automatic recovery when traffic normalizes.",
+        "Implemented a token bucket rate limiter with per-IP and global limits, burst allowance, and dynamic tightening under escalating attacks.",
+        "Wrote an IP scoring system using z-score deviation and consistency history to target sustained attackers rather than blocking all high-traffic sources.",
+        "Integrated with Linux iptables for kernel-level packet dropping, with whitelist support and dry-run fallback when root access is unavailable."
+      ],
+      "tech": ["Python", "iptables", "Docker"]
+    },
+    {
+      "id": "proj-5",
+      "title": "Athletic Tournament Management System",
+      "category": "Project Management",
+      "highlight": false,
+      "description": "Digital tournament management system for the German University in Cairo covering both students and staff, with comprehensive project documentation.",
+      "bullets": [
+        "Contributed to the planning phase of a digital tournament management system for GUC students and staff.",
+        "Delivered a Project Charter, Scope Statement, and a three-level Work Breakdown Structure with 10+ sub-activities.",
+        "Mapped stakeholder interests and set up a Jira board simulation translating WBS elements into epics, tasks, and subtasks with owners and dependencies."
+      ],
+      "tech": ["Project Management", "Jira", "Stakeholder Analysis"]
+    },
+    {
+      "id": "proj-6",
       "title": "Real-Time Stock Analytics Platform",
       "category": "Data Engineering",
       "highlight": true,
       "description": "End-to-end data pipeline with Kafka/PySpark streaming, Airflow orchestration, PostgreSQL storage, and a GenAI Text-to-SQL agent with Apache Superset dashboards.",
       "bullets": [
-        "Built streaming pipeline with Kafka and PySpark orchestrated by Apache Airflow.",
-        "Integrated a GenAI Text-to-SQL agent using LangChain.",
-        "Built interactive dashboards with Apache Superset."
+        "Contributed to a data pipeline using Airflow for orchestration and Kafka with PySpark for real-time market data streaming.",
+        "Stored processed data in PostgreSQL, helped integrate a LangChain Text-to-SQL agent, and built dashboards with Apache Superset."
       ],
       "tech": [
         "Kafka",
@@ -202,27 +245,26 @@
       ]
     },
     {
-      "id": "proj-5",
+      "id": "proj-7",
       "title": "Graph-RAG Travel Assistant",
       "category": "AI / ML",
       "highlight": false,
       "description": "Knowledge graph from 50,000+ hotel reviews with Cypher-based retrieval, named entity recognition, SHAP/LIME explainability, and a Streamlit frontend.",
       "bullets": [
-        "Built knowledge graph from 50,000+ hotel reviews with Cypher-based retrieval and NER.",
-        "Combined vector similarity search with graph traversal for grounded LLM answers.",
-        "Added SHAP and LIME explainability to ML models."
+        "Contributed to a knowledge graph built from 50,000+ hotel reviews, with Cypher-based retrieval, named entity recognition, and a Streamlit frontend.",
+        "Helped design the retrieval layer combining vector similarity search with graph traversal to ground LLM answers in structured data. Added SHAP and LIME explainability to the ML models."
       ],
       "tech": ["Python", "Neo4j", "LangChain", "Streamlit", "SHAP", "LIME"]
     },
     {
-      "id": "proj-6",
+      "id": "proj-8",
       "title": "All-in-One Vacation Platform",
       "category": "Full Stack",
       "highlight": false,
       "description": "Full-stack travel booking platform with flight/hotel search, promo codes, Stripe payments, and Amadeus live booking integration.",
       "bullets": [
-        "Integrated Stripe for payments and Amadeus for live booking data.",
-        "Built in an Agile team using Git and GitHub."
+        "Contributed to a full-stack travel booking platform where users can search flights and hotels, apply promo codes, and get personalized recommendations.",
+        "Worked in an Agile team integrating Stripe for payments and Amadeus for live booking data."
       ],
       "tech": [
         "MongoDB",
@@ -234,65 +276,47 @@
       ]
     },
     {
-      "id": "proj-7",
-      "title": "University Academic System and Portal",
-      "category": "Backend",
-      "highlight": false,
-      "description": "Academic management system with 50+ stored procedures, views, triggers, and a role-based web portal for students, advisors, and administrators.",
-      "bullets": [
-        "Designed normalized relational schema with 50+ stored procedures, views, triggers, and functions.",
-        "Automated registration, graduation checks, and probation rules.",
-        "Built role-based portal for students, advisors, and administrators."
-      ],
-      "tech": ["SQL Server", "JavaScript", "HTML", "CSS"]
-    },
-    {
-      "id": "proj-8",
+      "id": "proj-9",
       "title": "Embedded Auto Lane Detection",
       "category": "Embedded",
       "highlight": false,
       "description": "Real-time lane detection system in C interfacing directly with hardware drivers for autonomous navigation.",
       "bullets": [
-        "Built real-time lane detection in C with direct hardware driver integration."
+        "Contributed to a real-time lane detection system in C that interfaced with hardware drivers to support autonomous navigation on an embedded platform."
       ],
       "tech": ["C", "Embedded Systems", "Hardware Integration"]
     },
     {
-      "id": "proj-9",
-      "title": "Athletic Tournament Management System",
-      "category": "Project Management",
+      "id": "proj-10",
+      "title": "University Academic System and Portal",
+      "category": "Backend",
       "highlight": false,
-      "description": "Digital tournament management system for the German University in Cairo covering both students and staff, with comprehensive project documentation.",
+      "description": "Academic management system with 50+ stored procedures, views, triggers, and a role-based web portal for students, advisors, and administrators.",
       "bullets": [
-        "Contributed to planning and initiation phase with formal Project Charter, Scope Statement, and Work Breakdown Structure.",
-        "Mapped stakeholder interests and set up Jira board simulation translating WBS elements into epics, tasks, and subtasks.",
-        "Delivered WBS with 3 levels of hierarchy and 10+ sub-activities following standard project management practices."
+        "Contributed to an academic management system with a normalized relational schema and 50+ stored procedures, views, triggers, and functions covering registration, graduation checks, and probation rules.",
+        "Helped build a role-based web portal for students, advisors, and administrators."
       ],
-      "tech": ["Project Management", "Jira", "Stakeholder Analysis"]
+      "tech": ["SQL Server", "JavaScript", "HTML", "CSS"]
     },
     {
-      "id": "proj-10",
+      "id": "proj-11",
       "title": "Donation Ecosystem Platform",
       "category": "Full Stack",
       "highlight": false,
       "description": "Platform connecting donors with NGOs, with responsive and accessible interface for seamless giving experiences.",
       "bullets": [
-        "Participated in requirements gathering to understand donor and NGO needs.",
-        "Delivered a responsive, accessible React prototype with modern UI/UX patterns.",
-        "Implemented component architecture supporting scalable feature additions."
+        "Contributed to a platform connecting donors with NGOs, took part in requirements gathering, and helped deliver a responsive React prototype."
       ],
       "tech": ["React", "JavaScript", "Responsive Design", "Accessibility"]
     },
     {
-      "id": "proj-11",
+      "id": "proj-12",
       "title": "The Last of Us: Legacy Game Engine",
       "category": "Backend",
       "highlight": false,
       "description": "Turn-based survival game in Java demonstrating OOP principles, MVC architecture, and comprehensive exception handling.",
       "bullets": [
-        "Built turn-based survival game engine using Java OOP principles and MVC architecture.",
-        "Implemented custom GUI with grid-based map system for strategic gameplay.",
-        "Applied thorough exception handling and defensive programming patterns."
+        "Contributed to a turn-based survival game in Java using OOP and MVC, with a custom GUI, grid-based map, and exception handling."
       ],
       "tech": ["Java", "OOP", "Game Development", "MVC Architecture"]
     }
