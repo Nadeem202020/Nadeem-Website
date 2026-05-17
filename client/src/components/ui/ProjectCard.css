@@ -3,7 +3,8 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 2rem;
+  min-width: 0;
+  padding: 1.75rem;
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 8px;
@@ -54,21 +55,24 @@
 /* Project Title */
 .project-title {
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: clamp(0.95rem, 2.4vw, 1.15rem);
   font-weight: 800;
   color: var(--color-text);
   margin: 0 0 0.8rem 0;
+  line-height: 1.08;
   letter-spacing: -0.01em;
+  overflow-wrap: anywhere;
 }
 
 /* Description */
 .project-description {
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   color: var(--color-muted);
-  line-height: 1.6;
-  margin: 0 0 1.5rem 0;
+  line-height: 1.5;
+  margin: 0 0 1.2rem 0;
   flex-grow: 1;
+  overflow-wrap: anywhere;
 }
 
 /* Bullets Container */
@@ -91,12 +95,13 @@
 
 .bullets-list li {
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: var(--color-muted);
-  line-height: 1.5;
+  line-height: 1.42;
   margin-bottom: 0.5rem;
   padding-left: 1.2rem;
   position: relative;
+  overflow-wrap: anywhere;
 }
 
 .bullets-list li::before {
@@ -143,33 +148,33 @@
 /* Responsive */
 @media (max-width: 768px) {
   .project-card {
-    padding: 1.5rem;
+    padding: 1.35rem;
   }
 
   .project-title {
-    font-size: 1.1rem;
+    font-size: clamp(0.92rem, 4vw, 1rem);
   }
 
   .project-description {
-    font-size: 0.9rem;
+    font-size: 0.84rem;
   }
 
   .bullets-list li {
-    font-size: 0.85rem;
+    font-size: 0.79rem;
   }
 }
 
 @media (max-width: 480px) {
   .project-card {
-    padding: 1.2rem;
+    padding: 0.95rem;
   }
 
   .project-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .project-description {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   .category-badge {
@@ -183,10 +188,10 @@
   }
 
   .bullets-list li {
-    font-size: 0.8rem;
+    font-size: 0.76rem;
   }
 
   .toggle-button {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
   }
 }
