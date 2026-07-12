@@ -2,7 +2,7 @@
   "meta": {
     "name": "Nadeem Mohamed Soliman",
     "title": "Software Engineer",
-    "tagline": "Building backend systems, data pipelines, and AI applications.",
+    "tagline": "Building full-stack applications, backend microservices, data pipelines, and AI/ML systems.",
     "email": "nadeemmohammed12346@gmail.com",
     "phone": "+20 100 955 9273",
     "linkedin": "https://linkedin.com/in/nadeem-soliman",
@@ -13,21 +13,21 @@
   },
 
   "about": {
-    "summary": "Senior Computer Science and Engineering student at the German University in Cairo, graduating June 2026 with an A+ Bachelor's degree. I have shipped backend systems, data pipelines, and AI applications across banking, logistics, and enterprise software. I focus on building services that hold up under load, pipelines that don't need babysitting, and code that the next engineer can actually understand."
+    "summary": "Software Engineer and Computer Science and Engineering graduate from the German University in Cairo, with an A+ Bachelor's degree. I have shipped full-stack applications, backend microservices, data pipelines, and AI/ML systems across banking, logistics, and enterprise software, working across the complete software development life cycle (SDLC) in Agile/Scrum teams. My work spans REST and GraphQL API design, distributed systems, cloud deployment (GCP, AWS), and applied machine learning from production LLM pipelines to computer vision research. I write unit and integration tests as a habit, not an afterthought, and care about code the next engineer can actually read."
   },
 
   "education": {
     "id": "edu-1",
     "institution": "German University in Cairo (GUC)",
     "degree": "Bachelor of Science in Computer Engineering and Science",
-    "period": "Sep 2021 – Jun 2026 (Expected)",
+    "period": "Sep 2021 – Jun 2026",
     "gpa": "1.24 / 5.0",
     "gpaNote": "Top of class — German grading scale where 1.0 is the highest possible grade",
     "thesis": {
       "title": "Vision Transformer Framework for Vehicle Intention Prediction",
       "grade": "A+",
-      "description": "Trained a Vision Transformer (ViT) to predict vehicle maneuvers in autonomous driving scenarios, beating Uber's baseline LSTM model by 52.9%.",
-      "tech": ["PyTorch", "Python", "Argoverse 2"],
+      "description": "Reproduced Uber's CNN baseline from the original paper, retrained it on the public Argoverse 2 autonomous driving dataset, and trained a Vision Transformer (ViT) under identical conditions to benchmark both architectures on vehicle maneuver/intention prediction. At matched training checkpoints, the ViT outperformed the CNN baseline by 52.9%.",
+      "tech": ["PyTorch", "Python", "Computer Vision", "Deep Learning"],
       "period": "Feb 2025 – Jun 2025"
     },
     "coursework": [
@@ -37,24 +37,47 @@
       "Computer Networks",
       "Database Systems",
       "Network Security",
+      "Software Engineering",
+      "Artificial Intelligence",
       "Project Management"
     ]
   },
 
   "experience": [
     {
-      "id": "exp-1",
+      "id": "exp-0",
+      "company": "Aman Raya",
+      "role": "Executive Software Engineer",
+      "type": "Full-time",
+      "period": "Jun 2026 – Present",
+      "bullets": [
+        "Developing Spring Boot microservices for the Bill Payments team, integrating external billers and service providers through WSO2 to enable secure bill payment processing backed by PostgreSQL."
+      ],
+      "tech": ["Spring Boot", "PostgreSQL", "WSO2", "Java"]
+    },
+    {
+      "id": "exp-1a",
       "company": "Turuq",
       "role": "Software Engineer",
       "type": "Part-time",
-      "period": "Oct 2025 – Present",
+      "period": "Jun 2026 – Present",
       "bullets": [
-        "Built an embedded Shopify app in Remix, React, and Node.js that connects merchant stores to a logistics backend via Shopify Webhooks and GraphQL, with real-time order events across multiple accounts.",
-        "Shipped a bulk waybill generation feature that automated the full shipment creation workflow, cutting manual processing time by 80% across all merchant accounts.",
-        "Contributed to a courier management service on Bun, Hono, Clerk, MongoDB, and Next.js for real-time order tracking and courier dispatch.",
-        "Built a customer communication service on top of the Meta Cloud API for inbound and outbound messaging, conversation state across multi-step flows, and order confirmations via HMAC-verified webhooks.",
-        "Consolidated WhatsApp, SMS, and email into a single modular TypeScript backend using inheritance and polymorphism, so new channels can be added without touching existing integrations.",
-        "Built a black-box integration test suite in Vitest and Supertest that exercises the communication service purely over HTTP, asserting response shapes, MongoDB side effects, and outbound Graph API calls against a local Express mock."
+        "Refactored and consolidated WhatsApp, SMS, and email channels into a single modular TypeScript backend service using inheritance and polymorphism, enabling new channels to be added without modifying existing integrations, reducing code duplication, and improving maintainability.",
+        "Built a 54-test black-box integration test suite using Vitest and Supertest, exercising the communication service over HTTP while validating MongoDB side effects and outbound Graph API calls, enabling reliable regression testing and CI integration."
+      ],
+      "tech": ["TypeScript", "Vitest", "Supertest", "MongoDB", "Meta API"]
+    },
+    {
+      "id": "exp-1",
+      "company": "Turuq",
+      "role": "Software Engineer",
+      "type": "Full-time",
+      "period": "Oct 2025 – Jun 2026",
+      "bullets": [
+        "Built an embedded Shopify app using Remix, React, and Node.js that connects merchant storefronts to a logistics backend via Shopify Webhooks and the GraphQL Admin API, processing real-time order events across multiple merchant accounts.",
+        "Designed and shipped a bulk waybill generation feature that automated the end-to-end shipment creation workflow, reducing manual processing time by 80%.",
+        "Developed backend features for a courier management service built with Bun, Hono, Clerk, MongoDB, and Next.js, supporting real-time order tracking and courier dispatch.",
+        "Built a customer communication service on top of the Meta Cloud API for inbound/outbound messaging, stateful conversation workflows, and HMAC-verified webhooks, enabling automated customer notifications and order confirmations."
       ],
       "tech": [
         "Remix",
@@ -76,8 +99,8 @@
       "type": "Internship",
       "period": "Aug 2025",
       "bullets": [
-        "Built Spring Boot microservices for a virtual banking platform with Apache Kafka for async inter-service messaging and WSO2 API Gateway for authenticated, rate-limited external routing.",
-        "Delivered REST APIs for mobile and web banking clients with OAuth 2.0 authentication, role-based access control, and request validation across all endpoints."
+        "Built scalable Spring Boot microservices for a virtual banking platform, integrating Apache Kafka for asynchronous event-driven messaging and WSO2 API Gateway for secure external API routing.",
+        "Developed the REST API layer for mobile and web banking clients, implementing OAuth 2.0 authentication, role-based access control (RBAC), and request validation following secure software development lifecycle (SSDLC) practices."
       ],
       "tech": ["Spring Boot", "Apache Kafka", "WSO2", "OAuth 2.0", "Java"]
     },
@@ -88,9 +111,9 @@
       "type": "Internship",
       "period": "Jul 2025 – Aug 2025",
       "bullets": [
-        "Integrated Keycloak SSO into OpenKM, replacing a fragmented login system and consolidating identity management inside a Dockerized MSSQL environment.",
-        "Built automated backup and recovery pipelines using Rclone for compliance and disaster recovery.",
-        "Wrote deployment and onboarding documentation that became the team's standard reference, cutting engineer ramp-up time by 60%."
+        "Integrated Keycloak single sign-on (SSO) into OpenKM, centralizing identity and access management within a Dockerized MSSQL environment.",
+        "Built automated backup and disaster recovery pipelines using Rclone to minimize data-loss risk and support compliance requirements.",
+        "Authored deployment and onboarding documentation that became the team's standard reference, reducing new-engineer ramp-up time by 60%."
       ],
       "tech": ["Keycloak", "Docker", "MSSQL", "Rclone", "OpenKM"]
     },
@@ -101,7 +124,7 @@
       "type": "Internship",
       "period": "Aug 2024 – Sep 2024",
       "bullets": [
-        "Built an automated quality tracking system in VBA (Excel and Access) for the production floor, replacing a fully manual process and cutting data entry time by 70% with more accurate reporting."
+        "Designed and built an automated quality tracking system in VBA (Excel and Access), replacing a manual process and reducing data entry time by 70% while improving reporting accuracy."
       ],
       "tech": ["VBA", "Excel", "Access"]
     },
@@ -112,7 +135,7 @@
       "type": "Internship",
       "period": "Jul 2024",
       "bullets": [
-        "Built a customer survey platform in Java, XHTML, and MySQL that let branch teams collect, store, and review structured feedback."
+        "Developed a customer survey platform using Java, XHTML, and MySQL that enabled branch teams to collect, store, and review structured customer feedback."
       ],
       "tech": ["Java", "XHTML", "MySQL"]
     },
@@ -123,7 +146,7 @@
       "type": "Internship",
       "period": "Jul 2024 – Sep 2024",
       "bullets": [
-        "Trained on IBM DataPower API Gateway configuration, ACH payment processing, and enterprise banking security protocols."
+        "Gained hands-on experience with IBM DataPower API Gateway, ACH payment processing workflows, and enterprise banking security protocols."
       ],
       "tech": ["IBM DataPower", "ACH", "API Gateway"]
     },
@@ -134,7 +157,7 @@
       "type": "Internship",
       "period": "Jul 2023",
       "bullets": [
-        "Delivered a full-stack MERN banking app with user authentication, account management, and transaction history, end to end in one month."
+        "Developed a full-stack MERN banking application featuring user authentication, account management, and transaction history, delivering the project within a one-month sprint."
       ],
       "tech": ["MongoDB", "Express.js", "React", "Node.js"]
     }
@@ -146,23 +169,24 @@
       "title": "Vision Transformer for Autonomous Vehicle Intention Prediction",
       "category": "AI / ML",
       "highlight": true,
-      "description": "Trained a ViT to predict vehicle maneuvers, beating Uber's LSTM baseline by 52.9% on Argoverse 2.",
+      "description": "Reproduced Uber's CNN baseline and trained a Vision Transformer (ViT) on Argoverse 2 to benchmark vehicle maneuver prediction, with the ViT outperforming by 52.9%.",
       "bullets": [
-        "Beat Uber's baseline LSTM model by 52.9%.",
-        "Handled data preprocessing and temporal feature extraction on the Argoverse 2 dataset."
+        "Reproduced Uber's CNN baseline from the original paper, retrained it on the public Argoverse 2 autonomous driving dataset, and trained a Vision Transformer (ViT) under identical conditions to benchmark both architectures on vehicle maneuver/intention prediction.",
+        "Designed and implemented the full data preprocessing, temporal feature extraction, model training, and evaluation pipeline for both architectures; at matched training checkpoints, the ViT outperformed the CNN baseline by 52.9%.",
+        "Conducted comparative model benchmarking and error analysis to validate results against published research, applying rigorous experiment tracking and reproducibility practices."
       ],
-      "tech": ["PyTorch", "Python", "Vision Transformers", "Argoverse 2"]
+      "tech": ["PyTorch", "Python", "Vision Transformers", "Deep Learning", "Computer Vision", "Argoverse 2"]
     },
     {
       "id": "proj-2",
       "title": "Massively Scalable Food Delivery Platform (Talabat-like)",
       "category": "Backend",
       "highlight": true,
-      "description": "Distributed food delivery backend across microservices for customers, restaurants, and drivers; owned the User Service end to end.",
+      "description": "Distributed, fault-tolerant food delivery backend built as independently deployable microservices for customers, restaurants, and drivers.",
       "bullets": [
-        "Contributed to a distributed food delivery backend across microservices for customers, restaurants, and drivers; owned the User Service end to end: JWT auth, BCrypt password hashing, and role-based access control.",
-        "Replaced shared-table SQL joins with Feign clients, published domain events over RabbitMQ, and wrote idempotent Saga consumers to update user stats on order completion and cancellation, backed by a DLQ with three-attempt retry.",
-        "Deployed the User Service on Kubernetes with health probes and a headless StatefulSet for Postgres, and added Prometheus metrics with a Grafana dashboard and structured Loki4J logs with MDC fields."
+        "Contributed to a distributed, fault-tolerant food delivery backend built as independently deployable microservices for customers, restaurants, and drivers; owned the User Service end to end — JWT authentication, BCrypt password hashing, and role-based access control.",
+        "Replaced shared-table SQL joins with OpenFeign clients for inter-service communication, published domain events over RabbitMQ, and wrote idempotent Saga-pattern consumers to update user stats on order completion and cancellation, backed by a dead-letter queue (DLQ) with three-attempt retry for fault tolerance.",
+        "Deployed the User Service on Kubernetes with health/readiness probes and a headless StatefulSet for Postgres; added Prometheus metrics with a Grafana dashboard and structured Loki logs with MDC fields for full observability."
       ],
       "tech": [
         "Spring Boot",
@@ -180,13 +204,13 @@
       "title": "Agentic NDA Contract Analysis System",
       "category": "AI / ML",
       "highlight": true,
-      "description": "Agentic contract review pipeline with reasoning, policy, orchestration, and logging components.",
+      "description": "Agentic contract review pipeline with reasoning, policy, orchestration, and logging components — an applied RAG and agentic workflow system for legal document analysis.",
       "bullets": [
-        "Contributed to a 5-member team building an agentic contract review pipeline with reasoning, policy, orchestration, and logging components.",
-        "Fine-tuned a Qwen model using QLoRA on the ContractNLI benchmark to classify 17 legal hypotheses per contract as ENTAILED, CONTRADICTED, or NOT MENTIONED.",
-        "Built the vector embedding layer for semantic search over contract clauses, focusing on output reliability across real-world legal documents."
+        "Contributed to a 5-member team building an agentic contract review pipeline with reasoning, policy, orchestration, and logging components — an applied retrieval-augmented generation (RAG) and agentic workflow system for legal document analysis.",
+        "Fine-tuned a Qwen large language model (LLM) using QLoRA parameter-efficient fine-tuning on the ContractNLI benchmark to classify 17 legal hypotheses per contract as ENTAILED, CONTRADICTED, or NOT MENTIONED.",
+        "Built the vector embedding and semantic search layer for retrieval over contract clauses using a vector database, focusing on output reliability and grounding across real-world legal documents."
       ],
-      "tech": ["LLMs", "QLoRA", "Agentic AI", "NLP"]
+      "tech": ["LLMs", "QLoRA", "LangChain", "Agentic AI", "NLP", "Vector Search"]
     },
     {
       "id": "proj-4",
@@ -219,15 +243,15 @@
       "title": "Real-Time Stock Analytics Platform",
       "category": "Data Engineering",
       "highlight": true,
-      "description": "End-to-end data pipeline with Kafka/PySpark streaming, Airflow orchestration, PostgreSQL storage, and a LangChain Text-to-SQL agent.",
+      "description": "End-to-end data engineering pipeline using Apache Airflow for orchestration and Apache Kafka with PySpark for real-time market data stream processing.",
       "bullets": [
-        "Contributed to a data pipeline using Airflow for orchestration and Kafka with PySpark for real-time market data streaming.",
-        "Stored processed data in PostgreSQL and helped integrate a LangChain Text-to-SQL agent for natural language querying.",
-        "Built interactive dashboards with Apache Superset to visualize streaming market data and pipeline metrics."
+        "Contributed to an end-to-end data engineering pipeline using Apache Airflow for workflow orchestration and Apache Kafka with PySpark for real-time market data stream processing.",
+        "Stored processed data in PostgreSQL and helped integrate a LangChain Text-to-SQL agent for natural language querying over the warehouse; fully containerized with Docker and cloud-deployed.",
+        "Built interactive Apache Superset dashboards to visualize streaming market data and pipeline health metrics for data-driven monitoring."
       ],
       "tech": [
         "Kafka",
-        "Spark",
+        "PySpark",
         "Airflow",
         "Docker",
         "LangChain",
@@ -240,13 +264,13 @@
       "title": "Graph-RAG Travel Assistant",
       "category": "AI / ML",
       "highlight": false,
-      "description": "Knowledge graph from 50,000+ hotel reviews with Cypher-based retrieval, named entity recognition, and a Streamlit frontend.",
+      "description": "Knowledge graph from 50,000+ hotel reviews with hybrid retrieval combining vector similarity search and Cypher-based graph traversal.",
       "bullets": [
-        "Contributed to a knowledge graph built from 50,000+ hotel reviews with named entity recognition and a Streamlit frontend.",
-        "Helped design a retrieval layer combining vector similarity search with Cypher-based graph traversal to ground LLM answers in structured data.",
-        "Added SHAP and LIME explainability to the ML models to make recommendations interpretable."
+        "Contributed to a knowledge graph built from 50,000+ hotel reviews with named entity recognition (NER) and a Streamlit frontend for interactive querying.",
+        "Helped design a hybrid retrieval layer combining vector similarity search with Cypher-based graph traversal to ground LLM answers in structured data, reducing hallucination.",
+        "Added SHAP and LIME explainability (XAI) to the underlying ML models to make recommendations interpretable and auditable."
       ],
-      "tech": ["Python", "Neo4j", "LangChain"]
+      "tech": ["Python", "Neo4j", "LangChain", "Explainable AI"]
     },
     {
       "id": "proj-8",
@@ -255,9 +279,9 @@
       "highlight": false,
       "description": "Full-stack travel booking platform with flight/hotel search, promo codes, Stripe payments, and Amadeus live booking integration.",
       "bullets": [
-        "Contributed to a full-stack travel booking platform where users can search flights and hotels, apply promo codes, and get personalized recommendations.",
-        "Integrated Stripe for payments and Amadeus for live flight and hotel booking data.",
-        "Worked in an Agile team using Git and GitHub, contributing across the MERN stack from API design to frontend components."
+        "Contributed to a full-stack travel booking platform where users can search and book flights and hotels, apply promo codes, and receive personalized recommendations.",
+        "Integrated Stripe for payment processing and Amadeus for live flight and hotel booking data via third-party API integration.",
+        "Worked in an Agile team using Git version control and GitHub for collaboration, contributing across the MERN stack from API design to frontend components."
       ],
       "tech": [
         "MongoDB",
@@ -273,23 +297,23 @@
       "title": "Embedded Auto Lane Detection",
       "category": "Embedded",
       "highlight": false,
-      "description": "Real-time lane detection system in C interfacing directly with hardware drivers on an embedded platform.",
+      "description": "Real-time lane detection system written in C interfacing directly with hardware drivers on an embedded platform.",
       "bullets": [
-        "Contributed to a real-time lane detection system in C that interfaced directly with hardware drivers on an embedded platform.",
-        "Helped implement the image processing logic to identify lane boundaries and feed steering signals to the navigation layer.",
-        "Tested the system under varying lighting and road conditions to check detection reliability."
+        "Contributed to a real-time lane detection system written in C that interfaced directly with hardware drivers on an embedded platform, working within tight memory and real-time processing constraints.",
+        "Helped implement the image processing and signal processing logic to identify lane boundaries and feed steering signals to the navigation layer.",
+        "Tested the system under varying lighting and road conditions to validate detection reliability and robustness."
       ],
-      "tech": ["C", "Hardware Integration"]
+      "tech": ["C", "Computer Vision", "Embedded Systems", "Hardware Integration"]
     },
     {
       "id": "proj-10",
       "title": "University Academic System and Portal",
       "category": "Backend",
       "highlight": false,
-      "description": "Academic management system with 50+ stored procedures, views, triggers, and functions.",
+      "description": "Academic management system with a normalized relational database schema and 50+ stored procedures, views, triggers, and functions.",
       "bullets": [
-        "Contributed to an academic management system with a normalized relational schema and 50+ stored procedures, views, triggers, and functions.",
-        "Automated registration, graduation checks, and probation rules at the database layer to enforce business logic consistently.",
+        "Contributed to an academic management system with a normalized relational database schema and 50+ stored procedures, views, triggers, and functions.",
+        "Automated registration, graduation checks, and academic probation rules at the database layer to enforce business logic consistently across the application.",
         "Helped build a role-based web portal with separate views and permissions for students, advisors, and administrators."
       ],
       "tech": ["SQL Server", "JavaScript", "HTML", "CSS"]
@@ -299,26 +323,26 @@
       "title": "Donation Ecosystem Platform",
       "category": "Full Stack",
       "highlight": false,
-      "description": "Platform connecting donors with NGOs.",
+      "description": "Platform connecting donors with NGOs with accessible React prototype following WCAG standards.",
       "bullets": [
-        "Contributed to a platform connecting donors with NGOs, taking part in requirements gathering and system design.",
-        "Helped deliver a responsive, accessible React prototype covering donor registration, campaign browsing, and NGO profiles.",
-        "Coordinated with teammates to align UI components with the agreed data model and user flows."
+        "Contributed to a platform connecting donors with NGOs, taking part in requirements gathering across stakeholder groups and overall system design.",
+        "Helped deliver a responsive, accessible React prototype covering donor registration, campaign browsing, and NGO profiles, following web accessibility (WCAG) standards.",
+        "Coordinated with teammates to align reusable, component-based UI architecture with the agreed data model and user flows."
       ],
-      "tech": ["React", "JavaScript", "Responsive Design", "Accessibility"]
+      "tech": ["React.js", "Accessibility (WCAG)"]
     },
     {
       "id": "proj-12",
       "title": "The Last of Us: Legacy Game Engine",
       "category": "Backend",
       "highlight": false,
-      "description": "Turn-based survival game in Java applying OOP principles and MVC architecture.",
+      "description": "Turn-based survival game in Java applying OOP principles and MVC software architecture.",
       "bullets": [
-        "Contributed to a turn-based survival game in Java applying OOP principles and MVC architecture.",
-        "Helped build the game loop, grid-based map, and entity interaction system covering players, zombies, and collectibles.",
-        "Implemented a custom GUI and thorough exception handling to keep the game state consistent across edge cases."
+        "Contributed to a turn-based survival game in Java applying object-oriented programming (OOP) principles and MVC software architecture.",
+        "Helped build the core game loop, grid-based map, and entity interaction system covering players, enemies, and collectibles.",
+        "Implemented a custom GUI and thorough exception handling to keep game state consistent across edge cases."
       ],
-      "tech": ["Java", "OOP", "Game Development", "MVC Architecture"]
+      "tech": ["Java", "OOP", "MVC Architecture"]
     }
   ],
 
@@ -331,38 +355,49 @@
           "Spring Boot",
           "Node.js",
           "Express.js",
-          "Microservices",
+          "TypeScript",
           "REST APIs",
           "GraphQL",
           "OAuth 2.0",
+          "Microservices",
           "Event-Driven Architecture",
-          "WSO2"
+          "Message Queues (Kafka, RabbitMQ)",
+          "Webhooks",
+          "WSO2",
+          "IBM DataPower"
         ]
       },
       {
         "name": "AI & Machine Learning",
         "skills": [
           "PyTorch",
+          "TensorFlow (Familiar)",
           "Scikit-learn",
           "Computer Vision",
           "NLP",
-          "Vision Transformers",
-          "QLoRA",
+          "LLMs",
+          "LangChain",
+          "Agentic AI",
+          "RAG Systems",
+          "QLoRA Fine-Tuning",
+          "Prompt Engineering",
           "Model Training & Optimization",
           "Hyperparameter Tuning (Optuna)",
-          "TensorFlow"
+          "Vision Transformers (ViT)",
+          "Explainable AI (SHAP, LIME)"
         ]
       },
       {
         "name": "Data Engineering",
         "skills": [
-          "Apache Kafka",
           "Apache Spark (PySpark)",
+          "Apache Kafka",
           "Apache Airflow",
           "ETL Pipelines",
-          "Data Warehousing",
           "Stream Processing",
-          "Apache Superset"
+          "Data Warehousing",
+          "Apache Superset",
+          "Data Pipeline Orchestration"
         ]
       },
       {
@@ -374,23 +409,26 @@
           "MSSQL",
           "Redis",
           "Neo4j",
-          "SQL Optimization",
-          "B+ Tree Indexing",
-          "Knowledge Graphs"
+          "SQL",
+          "Database Design",
+          "Query Optimization",
+          "Knowledge Graphs",
+          "Vector Databases"
         ]
       },
       {
         "name": "Cloud & DevOps",
         "skills": [
           "Docker",
+          "Kubernetes",
           "Git",
           "GitHub",
           "Linux",
           "GCP",
           "AWS (EC2, S3, RDS)",
           "CI/CD Pipelines",
-          "IBM DataPower",
-          "Kubernetes"
+          "Prometheus",
+          "Grafana"
         ]
       },
       {
@@ -398,37 +436,54 @@
         "skills": [
           "React",
           "Remix",
-          "TypeScript",
+          "Next.js",
           "JavaScript",
-          "HTML",
-          "CSS",
-          "Streamlit"
+          "HTML5",
+          "CSS3",
+          "Responsive Design",
+          "Accessibility (WCAG)"
+        ]
+      },
+      {
+        "name": "Testing & Quality Assurance",
+        "skills": [
+          "Unit Testing",
+          "Integration Testing",
+          "Vitest",
+          "Supertest",
+          "Postman",
+          "Debugging",
+          "Regression Testing"
         ]
       },
       {
         "name": "Languages",
         "skills": [
-          "Python",
           "Java",
-          "TypeScript",
+          "Python",
           "JavaScript",
+          "TypeScript",
           "C",
           "C++",
-          "SQL"
+          "SQL",
+          "HTML",
+          "CSS"
         ]
       },
       {
         "name": "Concepts",
         "skills": [
-          "Distributed Systems",
+          "Agile/Scrum",
+          "SDLC",
           "System Design",
+          "Distributed Systems",
+          "Object-Oriented Design (OOP)",
           "Design Patterns",
-          "RAG Systems",
-          "OOP",
-          "Data Structures",
-          "Algorithms",
+          "Data Structures and Algorithms",
+          "Code Review",
+          "Cross-Functional Collaboration",
           "Networking",
-          "Agile/Scrum"
+          "Version Control"
         ]
       }
     ]
@@ -484,8 +539,7 @@
       "organization": "IEEE GUC Student Branch",
       "period": "Sep 2024 – Jul 2025",
       "bullets": [
-        "Led the technical program, coordinating a team to plan and run 36 technical sessions across the academic year.",
-        "Nearly 50 students learned from the program."
+        "Led and managed a 40-person cross-functional team to plan and deliver 36 technical sessions across the academic year, reaching over 200 students covering curriculum design, stakeholder communication, and team leadership."
       ]
     },
     {
@@ -494,7 +548,7 @@
       "organization": "GUC — Introduction to Programming (CSEN 102)",
       "period": "Sep 2023 – Jan 2024",
       "bullets": [
-        "Ran weekly Python lab sessions for 20+ students covering data structures, algorithms, and OOP."
+        "Ran weekly Python lab sessions for 20+ students covering data structures, algorithms, and object-oriented programming fundamentals."
       ]
     }
   ]
